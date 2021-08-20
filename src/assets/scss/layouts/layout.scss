@@ -1,0 +1,149 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+}
+
+#app {
+  min-width: 500px;
+  // padding: 30px 20px;
+  border-radius: 10px;
+  background-color: #fff;
+
+  .todo-header {
+    padding: 20px;
+    .date {
+      margin-bottom: 15px;
+      h1 {
+        font-size: 20px;
+        line-height: 1.1;
+        letter-spacing: -1px;
+        span {
+          font-size: 14px;
+          color: #a5b1c2;
+        }
+      }
+    }
+    .count {
+      font-size: 12px;
+      color: #3867d6;
+      font-weight: 700;
+      letter-spacing: -1px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #d1d8e0;
+    }
+  }
+
+  .todo-list {
+    margin-bottom: 20px;
+    min-height: 300px;
+    padding: 0 20px 20px 20px;
+    &-item {
+      display: flex;
+      padding: 5px 0;
+      align-items: center;
+      font-size: 15px;
+      letter-spacing: -1px;
+
+      input[type="checkbox"] {
+        display: inline-flex;
+        margin-right: 10px;
+      }
+      button {
+        display: inline-flex;
+        margin-left: auto;
+      }
+
+      .ic_check {
+        width: 26px;
+        height: 26px;
+        color: #3867d6;
+      }
+
+      .ic_check_circle {
+        display: inline-flex;
+        width: 26px;
+        height: 26px;
+        border: 1px solid #3867d6;
+        border-radius: 50%;
+      }
+
+      input[type="checkbox"] {
+        position: absolute;
+        left: -99999em;
+        top: -99999em;
+        width: 0;
+        height: 0;
+        opacity: 0;
+      }
+
+      label {
+        display: inline-flex;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      &.complete {
+        color: #a5b1c2;
+      }
+
+      .btn_delete {
+        border: 0;
+        background-color: transparent;
+        color: #a5b1c2;
+        display: none;
+        cursor: pointer;
+      }
+
+      &:hover .btn_delete {
+        display: flex;
+      }
+    }
+  }
+
+  .todo-input {
+    display: flex;
+    position: relative;
+    height: 120px;
+    // align-items: center;
+    button {
+      position: absolute;
+      bottom: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 70px;
+      height: 70px;
+      background-color: #ff6348;
+      border-radius: 50%;
+      border: 0;
+      color: #fff;
+      font-size: 2em;
+      cursor: pointer;
+    }
+
+    &-bx {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      height: 100%;
+      padding-top: 30px;
+      background-color: #ced6e0;
+      border-radius: 0 0 10px 10px;
+      input[type="text"] {
+        display: inline-flex;
+        width: 90%;
+        height: 36px;
+        line-height: 36px;
+        padding: 0 10px;
+        border: 1px solid #abb1b7;
+      }
+    }
+  }
+}
